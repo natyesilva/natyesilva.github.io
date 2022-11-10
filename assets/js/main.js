@@ -21,7 +21,7 @@ hoverChangeDescription(
 );
 hoverChangeDescription(
   ".C#",
-  "Sass (pré-processador css) é uma linguagem de folhas de estilo. É uma simples linguagem de script usada em arquivos Sass."
+  "O C# é uma linguagem multiplataforma. Sendo assim, você pode utilizá-la para desenvolver para plataformas web, dispositivos móveis e aplicações desktop."
 );
 hoverChangeDescription(
   ".react",
