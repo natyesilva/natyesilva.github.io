@@ -7,6 +7,7 @@ export function menu() {
       this.navLinks2 = document.querySelectorAll(navLinks2);
       this.activeClass = "active";
       this.handleClick = this.handleClick.bind(this);
+      this.handleKeydown = this.handleKeydown.bind(this);
     }
 
     animateLinks() {
@@ -19,21 +20,46 @@ export function menu() {
       });
     }
 
+    closeMenu() {
+      this.navList.classList.remove(this.activeClass);
+      this.mobileMenu.classList.remove(this.activeClass);
+      this.mobileMenu.setAttribute("aria-expanded", "false");
+      this.mobileMenu.setAttribute("aria-label", "Abrir menu");
+      document.body.classList.remove("nav-open");
+      this.navLinks.forEach((link) => {
+        link.style.animation = "";
+      });
+    }
+
     handleClick() {
-      this.navList.classList.toggle(this.activeClass);
-      this.mobileMenu.classList.toggle(this.activeClass);
+      const isOpen = this.navList.classList.toggle(this.activeClass);
+      this.mobileMenu.classList.toggle(this.activeClass, isOpen);
+      this.mobileMenu.setAttribute("aria-expanded", String(isOpen));
+      this.mobileMenu.setAttribute(
+        "aria-label",
+        isOpen ? "Fechar menu" : "Abrir menu"
+      );
+      document.body.classList.toggle("nav-open", isOpen);
       this.animateLinks();
+    }
+
+    handleKeydown(event) {
+      if (event.key === "Escape") {
+        this.closeMenu();
+        this.mobileMenu.focus();
+      }
     }
 
     addClickEvent() {
       this.mobileMenu.addEventListener("click", this.handleClick);
       this.navLinks2.forEach((item) => {
-        item.addEventListener("click", this.handleClick);
+        item.addEventListener("click", () => this.closeMenu());
       });
+      document.addEventListener("keydown", this.handleKeydown);
     }
 
     init() {
-      if (this.mobileMenu) {
+      if (this.mobileMenu && this.navList) {
         this.addClickEvent();
       }
       return this;

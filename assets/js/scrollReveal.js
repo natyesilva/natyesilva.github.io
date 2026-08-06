@@ -1,8 +1,14 @@
 export function initScrollReveal() {
+  if (typeof ScrollReveal === "undefined") {
+    return;
+  }
+
   const sr = ScrollReveal({
     origin: "top",
-    distance: "50px",
-    duration: 2000,
+    distance: "28px",
+    duration: 900,
+    easing: "ease",
+    reset: false,
   });
 
   sr.reveal(".delaySmallReveal", { delay: 200 });
