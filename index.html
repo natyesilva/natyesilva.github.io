@@ -411,48 +411,83 @@
             <h2>Projetos selecionados por relevância técnica e contexto verificável.</h2>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card intervalCardReveal">
-              <div class="project-visual">
-                <span>CP</span>
-              </div>
-              <div class="project-content">
-                <p class="project-kind">Projeto autoral</p>
-                <h3>CuidaPet</h3>
-                <p>
-                  Aplicativo Android para gestão da saúde e da rotina de
-                  múltiplos animais, criado a partir de um problema real de
-                  organização dos cuidados de pets.
-                </p>
-                <p>
-                  Organiza cadastro de animais, controle de peso, vacinas,
-                  tratamentos, agenda de medicações, histórico de doses,
-                  notificações locais e diferentes espécies.
-                </p>
-                <ul class="tag-list">
-                  <li>React</li>
-                  <li>Capacitor</li>
-                  <li>Supabase</li>
-                  <li>Android</li>
-                  <li>Notificações locais</li>
-                </ul>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/natyesilva/CuidaPet"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Repositório</a
-                  >
-                  <a
-                    href="https://cuida-pet-psi.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Demonstração</a
-                  >
+          <article class="case-highlight">
+            <div class="case-content">
+              <p class="project-kind">Case em destaque</p>
+              <h3>CuidaPet</h3>
+              <p class="case-lead">
+                CuidaPet nasceu de uma necessidade real: organizar a rotina de
+                saúde de vários animais em um só lugar, com histórico,
+                lembretes e dados importantes sempre acessíveis.
+              </p>
+
+              <div class="case-sections">
+                <div>
+                  <h4>Problema</h4>
+                  <p>
+                    Cuidar de múltiplos pets exige acompanhar vacinas, peso,
+                    tratamentos, horários de medicação, doses aplicadas ou
+                    puladas e informações específicas de cada espécie.
+                  </p>
+                </div>
+                <div>
+                  <h4>Solução</h4>
+                  <p>
+                    Um aplicativo mobile-first para centralizar cadastros,
+                    agenda diária, histórico de saúde e lembretes locais,
+                    incluindo suporte a diferentes espécies e animais exóticos.
+                  </p>
+                </div>
+                <div>
+                  <h4>Decisões técnicas</h4>
+                  <ul>
+                    <li>Frontend React com rotas públicas e área autenticada em `/app`.</li>
+                    <li>Persistência com Supabase Auth, banco relacional e RLS.</li>
+                    <li>Capacitor para empacotamento Android, câmera e notificações locais.</li>
+                    <li>Dosagem médica informada manualmente, sem cálculo automático pelo app.</li>
+                  </ul>
                 </div>
               </div>
-            </article>
+            </div>
 
+            <aside class="case-aside" aria-label="Resumo técnico do CuidaPet">
+              <div class="case-status">
+                <span>Status</span>
+                <strong>MVP Android em evolução</strong>
+              </div>
+              <ul class="case-feature-list">
+                <li>Cadastro de pets com foto e classificação por espécie.</li>
+                <li>Controle de peso, vacinas, tratamentos e veterinários.</li>
+                <li>Agenda diária e histórico de doses aplicadas ou puladas.</li>
+                <li>Notificações locais para lembretes de medicação.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Capacitor</li>
+                <li>Supabase</li>
+                <li>Android</li>
+                <li>Notificações locais</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://github.com/natyesilva/CuidaPet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Repositório</a
+                >
+                <a
+                  href="https://cuida-pet-psi.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Demonstração</a
+                >
+              </div>
+            </aside>
+          </article>
+
+          <h3 class="project-subheading">Outros projetos selecionados</h3>
+          <div class="project-grid">
             <article class="project-card intervalCardReveal">
               <div class="project-visual">
                 <span>OM</span>
