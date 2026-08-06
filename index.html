@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Natalia Silva" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Natalia Elisa de Barros Silva" />
+    <meta name="copyright" content="Natalia Elisa de Barros Silva" />
+    <meta http-equiv="content-language" content="pt-BR" />
+    <meta name="theme-color" content="#0b0a17" />
     <meta
       name="description"
-      content="Meu nome é Natalia, sou desenvolvedora Full Stack plena"
+      content="Portfólio de Natalia Elisa de Barros Silva, Tech Lead e Software Engineer com experiência em .NET, SAP Business One, SAP HANA, APIs, integrações e desenvolvimento Full Stack."
     />
     <meta
       name="keywords"
-      content="sites, web, desenvolvimento, frontend, Natalia Silva,programador, front-end, freelancer, freela, website, portfólio"
+      content="Natalia Elisa de Barros Silva, Tech Lead, Software Engineer, .NET, C#, SAP Business One, SAP HANA, APIs REST, integrações empresariais, desenvolvimento Full Stack"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#6610F2" />
-    <meta name="copyright" content="Natalia Silva 2022" />
-    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="Natalia Elisa de Barros Silva | Tech Lead e Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Portfólio profissional de Natalia Elisa de Barros Silva, Tech Lead e Software Engineer especializada em .NET, SAP Business One, APIs e integrações empresariais."
+    />
+    <meta property="og:url" content="https://natyesilva.github.io/" />
     <meta
       property="og:image"
-      content="https://iuricode.com/assets/image/preview.png"
+      content="https://natyesilva.github.io/assets/image/logo-page.png"
     />
-    <meta property="og:title" content="Portfólio // Natalia Silva" />
-    <meta property="og:description" content="Portfólio // Natalia Silva" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Natalia Elisa de Barros Silva | Tech Lead e Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Tech Lead e Software Engineer com experiência em .NET, SAP Business One, APIs, integrações e desenvolvimento Full Stack."
+    />
+    <meta
+      name="twitter:image"
+      content="https://natyesilva.github.io/assets/image/logo-page.png"
+    />
+
+    <link rel="canonical" href="https://natyesilva.github.io/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="manifest" href="manifest.json" />
@@ -35,220 +61,577 @@
       type="image/x-icon"
     />
     <link rel="icon" href="assets/image/logo-page.svg" />
-    <link rel="apple-touch-icon" href="assets/image/logo-page.svg" />
-    <link rel="canonical" href="https://iuricode.com/" />
-    <script src="assets/js/svg-inject.min.js"></script>
-    <title>Natalia Silva</title>
+    <link rel="apple-touch-icon" href="assets/image/logo-page.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Natalia Elisa de Barros Silva",
+        "jobTitle": "Tech Lead e Software Engineer",
+        "url": "https://natyesilva.github.io/",
+        "image": "https://natyesilva.github.io/assets/image/natalia.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São José dos Campos",
+          "addressRegion": "São Paulo",
+          "addressCountry": "BR"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Open Solutions"
+        },
+        "sameAs": [
+          "https://github.com/natyesilva",
+          "https://www.linkedin.com/in/natalia-silva-910419191/"
+        ],
+        "knowsAbout": [
+          ".NET",
+          "C#",
+          "ASP.NET Core",
+          "SAP Business One",
+          "SAP HANA",
+          "APIs REST",
+          "Integrações empresariais",
+          "Arquitetura de software",
+          "Liderança técnica"
+        ]
+      }
+    </script>
+
+    <title>Natalia Elisa de Barros Silva | Tech Lead e Software Engineer</title>
   </head>
 
   <body>
-    <header>
-      <div class="grid-layout">
-        <nav>
-          
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <ul class="nav-list">
-            <li><a href="#s-about">Quem sou</a></li>
-            <li>
-              <a href="#s-projects">Projetos</a>
-            </li>
-            <li>
-              <a href="#s-services">Serviços</a>
-            </li>
-            <!-- <li>
-              <a href="#s-skills">Conhecimentos</a>
-            </li> -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="grid-layout header-inner">
+        <a class="brand" href="#s-home" aria-label="Início do portfólio">
+          <img src="assets/image/logo-page.svg" alt="" width="40" height="40" />
+          <span>Natalia Elisa</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <button
+            class="mobile-menu"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+          </button>
+
+          <ul class="nav-list" id="primary-navigation">
+            <li><a href="#s-about">Sobre</a></li>
+            <li><a href="#s-experience">Experiência</a></li>
+            <li><a href="#s-skills">Competências</a></li>
+            <li><a href="#s-projects">Projetos</a></li>
+            <li><a href="#s-contact">Contato</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section id="s-home">
-        <div class="grid-layout">
-          <div id="home">
-            <div id="home-container-text">
-              <h1 class="delayMediumReveal">
-                Olá, eu sou<br />
-                <span id="home-name">Natalia Silva.</span><br />
-                <span class="typewriter">
-                  Full Stack developer.
-                </span>
-              </h1>
-              <a
-                href="https://www.instagram.com/natyesilva/"
-                rel="noopener"
-                target="_blank"
-                class="delayExtraBigReveal"
-              >
-                Instagram
-              </a>
+    <main id="conteudo">
+      <section id="s-home" class="hero section">
+        <div class="grid-layout hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow delaySmallReveal">
+              São José dos Campos, São Paulo, Brasil
+            </p>
+            <h1 class="delayMediumReveal">
+              Olá, eu sou
+              <span>Natalia Elisa de Barros Silva.</span>
+            </h1>
+            <p class="hero-title typewriter">
+              Tech Lead e Software Engineer especializada em .NET, SAP Business
+              One, APIs e integrações empresariais.
+            </p>
+            <p class="hero-summary delayLargeReveal">
+              Transformo processos complexos em soluções organizadas, integradas
+              e fáceis de manter, combinando desenvolvimento Full Stack,
+              arquitetura e liderança técnica.
+            </p>
 
+            <div class="hero-actions delayExtraBigReveal" aria-label="Ações principais">
+              <a class="button primary" href="#s-projects">Ver projetos</a>
               <a
-                 href="https://docs.google.com/forms/d/1hDLtXrxFjjoHel0YDlqBV05PaskAVgKu7bvxE-HV8As/prefill" 
-                  class="btn-request-quote delayExtraBigReveal" 
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
+                class="button secondary"
+                href="https://github.com/natyesilva"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/icons/github.svg" alt="" width="20" height="20" />
+                GitHub
               </a>
-              <a href="https://api.whatsapp.com/send?phone=5512992525561&text=Olá%2C%20entrei%20em%20contato%20via%20portfólio" 
-                class="btn-whatsapp delayExtraBigReveal" 
-                target="_blank" 
-                rel="noopener">
-                Entrar em contato
-              </a>
-           
-           
-            </div>
-            <div id="home-container-photo">
-              <div id="home-photo">
+              <a
+                class="button secondary"
+                href="https://www.linkedin.com/in/natalia-silva-910419191/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
-                  src="assets/image/logo-svg-lab.svg"
-                  alt="Logo"
-                  onload="SVGInject(this)"
-                  id="logo-lab"
-                  class="object"
-                  width="500px"
-                  height="500px"
+                  src="assets/icons/linkedin.svg"
+                  alt=""
+                  width="20"
+                  height="20"
                 />
-              </div>
+                LinkedIn
+              </a>
+              <a class="button ghost" href="#s-contact">Entrar em contato</a>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section id="s-about">
-        <div class="grid-layout">
-          <div id="about">
-            <div id="about-photo">
+          <aside class="hero-profile delayMediumReveal" aria-label="Resumo profissional">
+            <div class="profile-media">
               <img
                 src="assets/image/natalia.png"
-                width="400px"
-                height="400px"
-                alt="ola"
-                class="delayMediumReveal"
-                id="photo-naty"
+                width="460"
+                height="560"
+                alt="Foto de Natalia Elisa de Barros Silva"
               />
-              
             </div>
-            <article id="about-text">
-              <h2 class="delaySmallReveal">Quem sou <span>.</span></h2>
-              <p class="delayMediumReveal">
-                  Olá! Meu nome é <strong>Natalia Silva</strong>
-                  <br><br>
-                  Sou <strong>desenvolvedora Full Stack</strong>, formada em <strong>Análise e Desenvolvimento de Sistemas</strong>, 
-                  com <strong>5 anos de experiência</strong> na criação de automações em <strong>C#</strong> e <strong>Python</strong>, 
-                  além de desenvolver aplicações móveis, web e desktop.
-                  <br><br>
-                  Atualmente, estou cursando uma <strong>pós-graduação em Engenharia de Software</strong>, 
-                  sempre buscando soluções inovadoras e eficientes para simplificar processos e entregar resultados de alta qualidade.
-              </p>
-          </article>          
+            <div class="profile-panel" aria-label="Destaques profissionais">
+              <p>Tech Lead</p>
+              <strong>.NET, SAP B1, APIs e integrações</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="s-about" class="section about">
+        <div class="grid-layout two-column">
+          <div class="section-heading delaySmallReveal">
+            <p class="eyebrow">Sobre mim</p>
+            <h2>Full Stack, backend e liderança técnica.</h2>
+          </div>
+          <div class="rich-text delayMediumReveal">
+            <p>
+              Sou Tech Lead e Desenvolvedora Full Stack, formada em Análise e
+              Desenvolvimento de Sistemas e pós-graduada em Engenharia de
+              Software.
+            </p>
+            <p>
+              Tenho aproximadamente cinco anos de experiência em desenvolvimento
+              de software, atuando com análise de requisitos, definição de
+              arquitetura, desenvolvimento de funcionalidades, correção de
+              problemas, integrações entre sistemas, documentação técnica e apoio
+              ao time.
+            </p>
+            <p>
+              Atualmente trabalho como Tech Lead na Open Solutions, participando
+              de decisões técnicas, organização das demandas, acompanhamento dos
+              desenvolvedores, análise de qualidade, redução de retrabalho e
+              comunicação com produto, QA, consultoria e clientes.
+            </p>
+            <p>
+              Gosto de transformar processos complexos em soluções mais
+              organizadas, rastreáveis e fáceis de manter, com interesse em
+              arquitetura, qualidade, automação e aplicação prática de
+              inteligência artificial no desenvolvimento.
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="s-projects">
+      <section id="s-experience" class="section experience">
         <div class="grid-layout">
-          <h2 class="delaySmallReveal">Projetos <span>.</span></h2>
-           <a
-            href="https://github.com/natyesilva?tab=repositories"
-            rel="noopener"
-            target="_blank"
-            class="delayExtraBigReveal"
-            >Repositórios no GitHub</a
-          >
-          <p>Aqui você encontra projetos publicos e estudos</p>
+          <div class="section-heading centered delaySmallReveal">
+            <p class="eyebrow">Experiência</p>
+            <h2>Atuação em produto, backend, integrações e times técnicos.</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item intervalCardReveal">
+              <div>
+                <p class="period">2023 até o momento</p>
+                <h3>Tech Lead / Desenvolvedora Full Stack</h3>
+                <p class="company">Open Solutions</p>
+              </div>
+              <ul>
+                <li>Liderança técnica e acompanhamento do time de desenvolvimento.</li>
+                <li>Análise e refinamento de requisitos.</li>
+                <li>Definição de soluções, arquitetura e padrões técnicos.</li>
+                <li>Desenvolvimento e manutenção de aplicações empresariais.</li>
+                <li>APIs e integrações com SAP Business One e SAP Service Layer.</li>
+                <li>Funcionalidades com SAP UI5/Fiori, SAP HANA e SQL Server.</li>
+                <li>Workers, jobs, RabbitMQ e processamento assíncrono.</li>
+                <li>Investigação de problemas em produção e documentação técnica.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item intervalCardReveal">
+              <div>
+                <p class="period">2022 a 2023</p>
+                <h3>Desenvolvedora Mobile Júnior</h3>
+                <p class="company">Treevia</p>
+              </div>
+              <ul>
+                <li>Desenvolvimento de aplicações mobile com .NET MAUI.</li>
+                <li>Implementação de funcionalidades e manutenção evolutiva.</li>
+                <li>Integração com APIs.</li>
+                <li>Correção de bugs e melhoria da experiência dos usuários.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item intervalCardReveal">
+              <div>
+                <p class="period">2021 a 2022</p>
+                <h3>Desenvolvedora Full Stack</h3>
+                <p class="company">Delfos</p>
+              </div>
+              <ul>
+                <li>Início da carreira como estagiária, com evolução para Full Stack.</li>
+                <li>Desenvolvimento e manutenção de aplicações.</li>
+                <li>Funcionalidades de frontend e backend.</li>
+                <li>Integração com bancos de dados e APIs.</li>
+                <li>Correção de bugs e apoio na evolução dos sistemas.</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="s-services">
+      <section id="s-skills" class="section skills">
         <div class="grid-layout">
-            <h2 class="delaySmallReveal">Serviços <span>.</span></h2>
-            <div id="services">
-                <article class="intervalCardReveal">
-                    <h3>Automações</h3>
-                    <p>
-                        Automação de processos para eliminar tarefas repetitivas que podem ser realizadas pelo computador.
-                    </p>
-                </article>
-    
-                <article class="intervalCardReveal">
-                    <h3>Sites e E-commerce</h3>
-                    <p>
-                        Desenvolvimento de sites e lojas online para maximizar o alcance ao público desejado.
-                    </p>
-                </article>
-    
-                <article class="intervalCardReveal">
-                    <h3>Aplicativos Móveis</h3>
-                    <p>
-                        Criação de aplicativos para Android e iOS com foco em desempenho e usabilidade.
-                    </p>
-                </article>
-    
-                <article class="intervalCardReveal">
-                    <h3>Aplicativos Web</h3>
-                    <p>
-                        Desenvolvimento de aplicações web interativas e responsivas, adaptadas às necessidades do seu negócio.
-                    </p>
-                </article>
-    
-                <article class="intervalCardReveal">
-                    <h3>Software para Desktop</h3>
-                    <p>
-                        Desenvolvimento de software desktop personalizado para atender às demandas específicas do seu projeto.
-                    </p>
-                </article>
-    
-                <article class="intervalCardReveal">
-                    <h3>Integração de APIs</h3>
-                    <p>
-                        Integração de sistemas através de APIs para otimizar a comunicação e automação de processos.
-                    </p>
-                </article>
-    
-                <article class="intervalCardReveal">
-                    <h3>Consultoria Técnica</h3>
-                    <p>
-                        Suporte e orientação técnica para desenvolvimento, otimização e segurança de aplicações.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </section>
-    
+          <div class="section-heading centered delaySmallReveal">
+            <p class="eyebrow">Competências técnicas</p>
+            <h2>Stack organizada por área de atuação.</h2>
+          </div>
 
-    <!-- <section id="s-skills">
-      <div class="grid-layout">
-        <h2 class="delaySmallReveal">Conhecimentos <span>.</span></h2>
-          <div id="skills">
-    
-                <div id="skills-cards">
-                    <article class="intervalCardReveal">
-                        <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
-                        <p>Formada pelo Instituto Federal de São Paulo (IFSP), 2019 - 2022.</p>
-                    </article>
-    
-                    <article class="intervalCardReveal">
-                        <h3>Pós-Graduação em Engenharia de Software</h3>
-                        <p>Cursando pós-graduação em Engenharia de Software com previsão de conclusão em 2025.</p>
-                    </article>
-    
-                    <article class="intervalCardReveal">
-                        <h3>Certificação de Qualidade de Software (PIT QAX)</h3>
-                        <p>Certificada em Qualidade de Software pela PIT QAX, com foco em testes e processos de melhoria contínua.</p>
-                    </article>
-                </div>
-            
+          <div class="skills-grid">
+            <article class="skill-card intervalCardReveal">
+              <h3>Backend</h3>
+              <ul class="tag-list">
+                <li>C#</li>
+                <li>.NET</li>
+                <li>ASP.NET Core</li>
+                <li>APIs REST</li>
+                <li>Worker Services</li>
+                <li>Jobs assíncronos</li>
+                <li>Dapper</li>
+                <li>LINQ</li>
+                <li>Serilog</li>
+                <li>Quartz.NET</li>
+                <li>Topshelf</li>
+              </ul>
+            </article>
+
+            <article class="skill-card intervalCardReveal">
+              <h3>Frontend</h3>
+              <ul class="tag-list">
+                <li>JavaScript</li>
+                <li>SAP UI5</li>
+                <li>SAP Fiori</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Interfaces responsivas</li>
+              </ul>
+            </article>
+
+            <article class="skill-card intervalCardReveal">
+              <h3>Bancos de dados</h3>
+              <ul class="tag-list">
+                <li>SQL Server</li>
+                <li>SAP HANA</li>
+                <li>MongoDB</li>
+                <li>Supabase</li>
+                <li>Modelagem SQL</li>
+                <li>Consultas SQL</li>
+              </ul>
+            </article>
+
+            <article class="skill-card intervalCardReveal">
+              <h3>SAP e integrações</h3>
+              <ul class="tag-list">
+                <li>SAP Business One</li>
+                <li>SAP Service Layer</li>
+                <li>OData</li>
+                <li>Integrações empresariais</li>
+                <li>Produção</li>
+                <li>Estoque</li>
+                <li>Movimentação de materiais</li>
+              </ul>
+            </article>
+
+            <article class="skill-card intervalCardReveal">
+              <h3>Arquitetura</h3>
+              <ul class="tag-list">
+                <li>Clean Architecture</li>
+                <li>DDD</li>
+                <li>SOLID</li>
+                <li>Clean Code</li>
+                <li>Microsserviços</li>
+                <li>Processamento assíncrono</li>
+                <li>Documentação técnica</li>
+              </ul>
+            </article>
+
+            <article class="skill-card intervalCardReveal">
+              <h3>Liderança e DevOps</h3>
+              <ul class="tag-list">
+                <li>Liderança técnica</li>
+                <li>Code review</li>
+                <li>Refinamento de requisitos</li>
+                <li>Organização de demandas</li>
+                <li>Apoio ao time</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Azure DevOps</li>
+                <li>Pipelines</li>
+                <li>CI/CD</li>
+                <li>RabbitMQ</li>
+              </ul>
+            </article>
+          </div>
         </div>
-     </div>   
-  </section>
-   -->
+      </section>
+
+      <section id="s-projects" class="section projects">
+        <div class="grid-layout">
+          <div class="section-heading centered delaySmallReveal">
+            <p class="eyebrow">Projetos em destaque</p>
+            <h2>Projetos selecionados por relevância técnica e contexto verificável.</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card intervalCardReveal">
+              <div class="project-visual">
+                <span>CP</span>
+              </div>
+              <div class="project-content">
+                <p class="project-kind">Projeto autoral</p>
+                <h3>CuidaPet</h3>
+                <p>
+                  Aplicativo Android para gestão da saúde e da rotina de
+                  múltiplos animais, criado a partir de um problema real de
+                  organização dos cuidados de pets.
+                </p>
+                <p>
+                  Organiza cadastro de animais, controle de peso, vacinas,
+                  tratamentos, agenda de medicações, histórico de doses,
+                  notificações locais e diferentes espécies.
+                </p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>Capacitor</li>
+                  <li>Supabase</li>
+                  <li>Android</li>
+                  <li>Notificações locais</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/natyesilva/CuidaPet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Repositório</a
+                  >
+                  <a
+                    href="https://cuida-pet-psi.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Demonstração</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card intervalCardReveal">
+              <div class="project-visual">
+                <span>OM</span>
+              </div>
+              <div class="project-content">
+                <p class="project-kind">Backend, mensageria e frontend</p>
+                <h3>Order Management</h3>
+                <p>
+                  MVP de gestão de pedidos com API, banco relacional, publicação
+                  de eventos e worker para atualização assíncrona de status.
+                </p>
+                <p>
+                  O projeto evidencia arquitetura em camadas, histórico de
+                  status, idempotência no consumo de mensagens e execução local
+                  via compose.
+                </p>
+                <ul class="tag-list">
+                  <li>.NET 8</li>
+                  <li>EF Core</li>
+                  <li>PostgreSQL</li>
+                  <li>RabbitMQ</li>
+                  <li>Azure Service Bus</li>
+                  <li>React</li>
+                  <li>Docker</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/natyesilva/order-management"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Repositório</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card intervalCardReveal">
+              <div class="project-visual">
+                <span>WS</span>
+              </div>
+              <div class="project-content">
+                <p class="project-kind">Laboratório técnico</p>
+                <h3>WebSocket Server</h3>
+                <p>
+                  Servidor em C# para receber arquivos por WebSocket, com uso de
+                  HttpListener, buffer de leitura e escrita em arquivo.
+                </p>
+                <p>
+                  Um estudo pontual de comunicação persistente e transferência
+                  de dados em aplicações .NET.
+                </p>
+                <ul class="tag-list">
+                  <li>C#</li>
+                  <li>.NET</li>
+                  <li>WebSocket</li>
+                  <li>HttpListener</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/natyesilva/WebScoket"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Repositório</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card intervalCardReveal">
+              <div class="project-visual">
+                <span>NB</span>
+              </div>
+              <div class="project-content">
+                <p class="project-kind">Publicação web</p>
+                <h3>Portfólio profissional</h3>
+                <p>
+                  Site estático publicado no GitHub Pages para apresentar
+                  experiência, competências, projetos e canais profissionais.
+                </p>
+                <p>
+                  A implementação prioriza HTML semântico, CSS responsivo,
+                  acessibilidade, SEO e compatibilidade com hospedagem estática.
+                </p>
+                <ul class="tag-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>GitHub Pages</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/natyesilva/natyesilva.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Repositório</a
+                  >
+                  <a
+                    href="https://natyesilva.github.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Demonstração</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="projects-note">
+            Outros repositórios públicos ficam disponíveis no GitHub, sem destaque
+            aqui quando não há contexto, documentação ou maturidade suficiente.
+          </p>
+        </div>
+      </section>
+
+      <section id="s-education" class="section education">
+        <div class="grid-layout two-column">
+          <div class="section-heading delaySmallReveal">
+            <p class="eyebrow">Formação e certificações</p>
+            <h2>Base acadêmica e evolução contínua.</h2>
+          </div>
+
+          <div class="education-grid">
+            <article class="info-card delayMediumReveal">
+              <p class="period">Concluída em 2025 · 600 horas</p>
+              <h3>Pós-graduação em Engenharia de Software</h3>
+            </article>
+            <article class="info-card delayMediumReveal">
+              <p class="period">2019 a 2022</p>
+              <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
+              <p>Instituto Federal de São Paulo (IFSP)</p>
+            </article>
+            <article class="info-card delayMediumReveal">
+              <p class="period">Certificação</p>
+              <h3>Metodologias Ágeis</h3>
+            </article>
+            <article class="info-card delayMediumReveal">
+              <p class="period">Certificação</p>
+              <h3>Qualidade de Software — PIT QAX</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="s-contact" class="section contact">
+        <div class="grid-layout contact-grid">
+          <div class="section-heading delaySmallReveal">
+            <p class="eyebrow">Contato</p>
+            <h2>Vamos conversar sobre tecnologia, produto e engenharia.</h2>
+          </div>
+
+          <div class="contact-panel delayMediumReveal">
+            <p>
+              Para oportunidades profissionais, liderança técnica ou conversas
+              sobre desenvolvimento backend, Full Stack e integrações, os melhores
+              canais são LinkedIn e GitHub.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="button primary"
+                href="https://www.linkedin.com/in/natalia-silva-910419191/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/icons/linkedin.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                LinkedIn
+              </a>
+              <a
+                class="button secondary"
+                href="https://github.com/natyesilva"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/icons/github.svg" alt="" width="20" height="20" />
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="grid-layout footer-inner">
+        <p>© 2026 Natalia Elisa de Barros Silva.</p>
+        <a href="#s-home">Voltar ao topo</a>
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script type="module" src="assets/js/main.js"></script>

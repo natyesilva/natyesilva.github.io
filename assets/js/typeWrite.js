@@ -1,9 +1,13 @@
 export function typeWrite(elemento) {
-  const textoArray = elemento.innerHTML.split("");
-  elemento.innerHTML = " ";
+  if (!elemento) {
+    return;
+  }
+
+  const textoArray = elemento.textContent.trim().split("");
+  elemento.textContent = "";
   textoArray.forEach(function (letra, i) {
     setTimeout(function () {
-      elemento.innerHTML += letra;
-    }, 100 * i);
+      elemento.textContent += letra;
+    }, 8 * i);
   });
 }
