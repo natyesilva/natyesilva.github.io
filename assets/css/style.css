@@ -377,6 +377,13 @@ button:focus-visible {
   color: var(--text);
 }
 
+.button.whatsapp {
+  border-color: rgba(37, 211, 102, 0.36);
+  background: #25d366;
+  color: #06110f;
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.2);
+}
+
 .button.ghost {
   border-color: transparent;
   color: var(--text-muted);
@@ -632,8 +639,7 @@ button:focus-visible {
 
 .project-content p:not(.project-kind),
 .info-card p,
-.contact-panel p,
-.projects-note {
+.contact-panel p {
   color: var(--text-muted);
 }
 
@@ -653,12 +659,6 @@ button:focus-visible {
 .project-links a:hover {
   color: var(--text);
   text-decoration-color: currentColor;
-}
-
-.projects-note {
-  max-width: 760px;
-  margin: 28px auto 0;
-  text-align: center;
 }
 
 .education-grid {
