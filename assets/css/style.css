@@ -377,6 +377,13 @@ button:focus-visible {
   color: var(--text);
 }
 
+.button.whatsapp {
+  border-color: rgba(37, 211, 102, 0.36);
+  background: #25d366;
+  color: #06110f;
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.2);
+}
+
 .button.ghost {
   border-color: transparent;
   color: var(--text-muted);
