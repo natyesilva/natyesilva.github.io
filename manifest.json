@@ -1,7 +1,7 @@
 {
-  "name": "Natalia Elisa de Barros Silva | Portfólio",
-  "short_name": "Natalia Elisa",
-  "description": "Portfólio profissional de Natalia Elisa de Barros Silva, Tech Lead e Software Engineer.",
+  "name": "Natalia Barros Silva | Engenheira de Software e Tech Lead",
+  "short_name": "Natalia Barros Silva",
+  "description": "Engenheira de Software e Tech Lead. Desenvolvimento de aplicações web, sistemas personalizados, APIs, integrações e automações. Conheça meus projetos.",
   "lang": "pt-BR",
   "start_url": "/",
   "scope": "/",
@@ -19,7 +19,7 @@
       "src": "assets/image/logo-page.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }

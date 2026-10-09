@@ -6,18 +6,12 @@ export function menu() {
       this.navLinks = document.querySelectorAll(navLinks);
       this.navLinks2 = document.querySelectorAll(navLinks2);
       this.activeClass = "active";
+      this.lastNavigationFocus = null;
+      this.mobileViewport = window.matchMedia("(max-width: 900px)");
       this.handleClick = this.handleClick.bind(this);
       this.handleKeydown = this.handleKeydown.bind(this);
-    }
-
-    animateLinks() {
-      this.navLinks.forEach((link, index) => {
-        link.style.animation
-          ? (link.style.animation = "")
-          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-              index / 7 + 0.3
-            }s`);
-      });
+      this.handleViewportChange = this.handleViewportChange.bind(this);
+      this.handleOutsideFocus = this.handleOutsideFocus.bind(this);
     }
 
     closeMenu() {
@@ -32,6 +26,9 @@ export function menu() {
     }
 
     handleClick() {
+      if (!this.mobileViewport.matches) {
+        return;
+      }
       const isOpen = this.navList.classList.toggle(this.activeClass);
       this.mobileMenu.classList.toggle(this.activeClass, isOpen);
       this.mobileMenu.setAttribute("aria-expanded", String(isOpen));
@@ -40,13 +37,33 @@ export function menu() {
         isOpen ? "Fechar menu" : "Abrir menu"
       );
       document.body.classList.toggle("nav-open", isOpen);
-      this.animateLinks();
     }
 
     handleKeydown(event) {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && this.navList.classList.contains(this.activeClass)) {
         this.closeMenu();
         this.mobileMenu.focus();
+      }
+    }
+
+    handleViewportChange() {
+      if (!this.mobileViewport.matches) {
+        const buttonHadFocus = document.activeElement === this.mobileMenu ||
+          this.lastNavigationFocus === this.mobileMenu;
+        this.closeMenu();
+        if (buttonHadFocus) this.navLinks2[0]?.focus({ preventScroll: true });
+      } else if (this.navList.contains(document.activeElement) ||
+        this.navList.contains(this.lastNavigationFocus)) {
+        this.mobileMenu.focus({ preventScroll: true });
+      }
+    }
+
+    handleOutsideFocus(event) {
+      if (!this.mobileMenu.parentElement.contains(event.target)) {
+        this.lastNavigationFocus = null;
+        this.closeMenu();
+      } else if (event.type === "focusin") {
+        this.lastNavigationFocus = event.target;
       }
     }
 
@@ -56,11 +73,15 @@ export function menu() {
         item.addEventListener("click", () => this.closeMenu());
       });
       document.addEventListener("keydown", this.handleKeydown);
+      document.addEventListener("focusin", this.handleOutsideFocus);
+      document.addEventListener("pointerdown", this.handleOutsideFocus);
+      this.mobileViewport.addEventListener("change", this.handleViewportChange);
     }
 
     init() {
       if (this.mobileMenu && this.navList) {
         this.addClickEvent();
+        this.mobileMenu.closest(".site-header").classList.add("nav-ready");
       }
       return this;
     }
